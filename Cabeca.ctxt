@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Cabeca
+comment1.params=x\ y
+comment1.target=Cabeca(int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=seguidor
+comment3.target=void\ setSeguidor(Cobra)
+comment4.params=x\ y\ direction
+comment4.target=void\ moverPara(int,\ int,\ int)
+comment5.params=lastX\ lastY
+comment5.target=void\ setLastPosition(int,\ int)
+comment6.params=
+comment6.target=void\ verificarTeclas()
+comment7.params=
+comment7.target=void\ moverDeAcordoComDirecao()
+comment8.params=
+comment8.target=void\ verificarColisao()
+numComments=9

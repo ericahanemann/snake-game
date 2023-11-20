@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Cobra
+comment1.params=seguidor
+comment1.target=void\ setSeguidor(Cobra)
+comment2.params=x\ y\ direction
+comment2.target=void\ moverPara(int,\ int,\ int)
+comment3.params=
+comment3.target=int\ getLastX()
+comment4.params=
+comment4.target=int\ getLastY()
+comment5.params=lastX\ lastY
+comment5.target=void\ setLastPosition(int,\ int)
+numComments=6

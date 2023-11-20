@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Barriga
+comment1.params=x\ y
+comment1.target=Barriga(int,\ int)
+comment2.params=seguidor
+comment2.target=void\ setSeguidor(Cobra)
+comment3.params=x\ y\ direction
+comment3.target=void\ moverPara(int,\ int,\ int)
+comment4.params=lastX\ lastY
+comment4.target=void\ setLastPosition(int,\ int)
+numComments=5
