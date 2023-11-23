@@ -12,13 +12,19 @@ public class Barriga extends Cobra
     private int currentDirection = 0;
     
     
-    GreenfootImage image = new GreenfootImage("corpo.png");
+    GreenfootImage imageDown = new GreenfootImage("corpo.png");
+    GreenfootImage imageRight = new GreenfootImage("corpo.png");
+    GreenfootImage imageUp = new GreenfootImage("corpo-esquerda.png");
+    GreenfootImage imageLeft = new GreenfootImage("corpo-esquerda.png");
     
     public Barriga(int x, int y)
     {
         super();
-        setImage(image);
-        image.scale(20, 20);
+        setImage(imageRight);
+        imageDown.scale(20, 20);
+        imageRight.scale(20, 20);
+        imageUp.scale(20, 20);
+        imageLeft.scale(20, 20);
     }
     
     public void setSeguidor(Cobra seguidor)
@@ -40,23 +46,19 @@ public class Barriga extends Cobra
         this.currentDirection = direction;
         switch(currentDirection) {
             case DOWN:
-                setImage("corpo.png");
-                image.scale(20, 20);
+                setImage(imageDown);
                 setRotation(90);
                 break;
             case RIGHT:
-                setImage("corpo.png");
-                image.scale(20, 20);
+                setImage(imageRight);
                 setRotation(0);
                 break;
             case UP:
-                setImage("corpo-esquerda.png");
-                image.scale(20, 20);
+                setImage(imageUp);
                 setRotation(90);
                 break;
             case LEFT:
-                setImage("corpo-esquerda.png");
-                image.scale(20, 20);
+                setImage(imageLeft);
                 setRotation(0);
                 break;
         }

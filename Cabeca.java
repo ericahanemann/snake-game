@@ -12,13 +12,19 @@ public class Cabeca extends Cobra
     private static final int DOWN = 3;
     private int currentDirection = 0;
     
-    GreenfootImage image = new GreenfootImage("cabeca.png");
+    GreenfootImage imageDown = new GreenfootImage("cabeca.png");
+    GreenfootImage imageRight = new GreenfootImage("cabeca.png");
+    GreenfootImage imageUp = new GreenfootImage("cabeca-esquerda.png");
+    GreenfootImage imageLeft = new GreenfootImage("cabeca-esquerda.png");
 
     public Cabeca(int x, int y)
     {
         super();
-        setImage(image);
-        image.scale(20, 20);
+        setImage(imageRight);
+        imageDown.scale(20, 20);
+        imageRight.scale(20, 20);
+        imageUp.scale(20, 20);
+        imageLeft.scale(20, 20);
     }
 
     public void act()
@@ -47,23 +53,19 @@ public class Cabeca extends Cobra
         this.currentDirection = direction;
         switch(currentDirection) {
             case DOWN:
-                setImage("cabeca.png"); 
-                image.scale(10, 10);
+                setImage(imageDown);
                 setRotation(90);
                 break;
             case RIGHT:
-                setImage("cabeca.png");
-                image.scale(10, 10);
+                setImage(imageRight);
                 setRotation(0);
                 break;
             case UP:
-                setImage("cabeca-esquerda.png");
-                image.scale(10, 10);
+                setImage(imageUp);
                 setRotation(90);
                 break;
             case LEFT:
-                setImage("cabeca-esquerda.png");
-                image.scale(10, 10);
+                setImage(imageLeft);
                 setRotation(0);
                 break;
         }

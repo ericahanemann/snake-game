@@ -2,4 +2,6 @@
 comment0.target=Rabo
 comment1.params=x\ y
 comment1.target=Rabo(int,\ int)
-numComments=2
+comment2.params=x\ y\ direction
+comment2.target=void\ moverPara(int,\ int,\ int)
+numComments=3
