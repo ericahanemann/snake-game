@@ -38,7 +38,7 @@ public class MyWorld extends World
     }
 
     private void atualizarTextoPontuacao() {
-    String textoAtualizado = "Pontuação: " + pontuacao;
+    String textoAtualizado = "PONTUAÇÃO: " + pontuacao;
     
     textoPontuacao = new GreenfootImage(textoAtualizado, 24, Color.WHITE, null);
     
@@ -54,8 +54,3 @@ public class MyWorld extends World
         addObject(new Maca(), x, y);
     }
 }
-
-
-
-
-
