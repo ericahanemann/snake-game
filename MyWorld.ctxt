@@ -2,4 +2,12 @@
 comment0.target=MyWorld
 comment1.params=
 comment1.target=MyWorld()
-numComments=2
+comment2.params=
+comment2.target=void\ incrementarPontuacao()
+comment3.params=
+comment3.target=void\ prepararTextoPontuacao()
+comment4.params=
+comment4.target=void\ atualizarTextoPontuacao()
+comment5.params=
+comment5.target=void\ adicionarMaca()
+numComments=6

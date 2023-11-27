@@ -10,7 +10,7 @@ abstract class Cobra extends Actor
     private static final int LEFT = 1;
     private static final int UP = 2;
     private static final int DOWN = 3;
-    private int currentDirection = 0;
+    protected int currentDirection = 0;
     
     public void setSeguidor(Cobra seguidor)
     {

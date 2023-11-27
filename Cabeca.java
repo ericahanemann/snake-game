@@ -10,7 +10,7 @@ public class Cabeca extends Cobra
     private static final int LEFT = 1;
     private static final int UP = 2;
     private static final int DOWN = 3;
-    private int currentDirection = 0;
+    protected int currentDirection = 0;
     
     GreenfootImage imageDown = new GreenfootImage("cabeca.png");
     GreenfootImage imageRight = new GreenfootImage("cabeca.png");
@@ -31,6 +31,7 @@ public class Cabeca extends Cobra
     {
         verificarTeclas();
         moverDeAcordoComDirecao();
+        verificarToqueMaca();
         verificarColisao();
     }
     
@@ -129,11 +130,42 @@ public class Cabeca extends Cobra
         moverPara(newX, newY, currentDirection);
     }
 
-    public void verificarColisao()
-    {
-        if(getX() <= 0 || getX() >= getWorld().getWidth() - 1 || getY() <= 0 || getY() >= getWorld().getHeight() - 1)
-        {
+    public void verificarColisao() {
+        if (getX() <= 0 || getX() >= getWorld().getWidth() - 1 || getY() <= 0 || getY() >= getWorld().getHeight() - 1) {
             Greenfoot.stop();
+        }
+    }
+    
+    private void verificarToqueMaca() {
+        if (isTouching(Maca.class)) {
+            World world = getWorld();
+            if (world != null) {
+                aumentarPontuacao();
+                adicionarBarriga(getX(), getY());
+                adicionarMaca(world);
+            }
+        }
+    }
+    
+    private void adicionarBarriga(int x, int y) {
+        Cobra barriga = new Barriga(0, 0, this.currentDirection); 
+        barriga.setSeguidor(this.seguidor); 
+        getWorld().addObject(barriga, x, y); 
+        setSeguidor(barriga);
+    }
+    
+    private void adicionarMaca(World world) {
+        if (world instanceof MyWorld) {
+            int x = Greenfoot.getRandomNumber(world.getWidth());
+            int y = Greenfoot.getRandomNumber(world.getHeight());
+            world.addObject(new Maca(), x, y);
+        }
+    }
+    
+    private void aumentarPontuacao() {
+        World world = getWorld();
+        if (world instanceof MyWorld) {
+            ((MyWorld) world).incrementarPontuacao();
         }
     }
 }
