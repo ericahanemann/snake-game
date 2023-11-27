@@ -152,24 +152,24 @@ public class Cabeca extends Cobra
     }
     
     private void adicionarBarriga(int x, int y) {
-    int novoX = x;
-    int novoY = y;
-
-    if (currentDirection == RIGHT) {
-        novoX -= 20;
-    } else if (currentDirection == LEFT) {
-        novoX += 20; 
-    } else if (currentDirection == UP) {
-        novoY += 20;  
-    } else if (currentDirection == DOWN) {
-        novoY -= 20; 
+        int novoX = x;
+        int novoY = y;
+    
+        if (currentDirection == RIGHT) {
+            novoX -= 20;
+        } else if (currentDirection == LEFT) {
+            novoX += 20; 
+        } else if (currentDirection == UP) {
+            novoY += 20;  
+        } else if (currentDirection == DOWN) {
+            novoY -= 20; 
+        }
+    
+        Cobra barriga = new Barriga(0, 0, this.currentDirection);
+        barriga.setSeguidor(this.seguidor);
+        getWorld().addObject(barriga, novoX, novoY);
+        setSeguidor(barriga);
     }
-
-    Cobra barriga = new Barriga(0, 0, this.currentDirection);
-    barriga.setSeguidor(this.seguidor);
-    getWorld().addObject(barriga, novoX, novoY);
-    setSeguidor(barriga);
-}
     
     private void adicionarMaca(World world) {
         if (world instanceof MyWorld) {

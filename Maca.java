@@ -16,15 +16,7 @@ public class Maca extends Actor {
             World world = getWorld();
             if (world != null) {
                 world.removeObject(this); 
-                aumentarPontuacao();
             }
-        }
-    }
-
-    private void aumentarPontuacao() {
-        World world = getWorld();
-        if (world instanceof MyWorld) {
-            ((MyWorld) world).incrementarPontuacao();
         }
     }
 }

@@ -38,15 +38,15 @@ public class MyWorld extends World
     }
 
     private void atualizarTextoPontuacao() {
-    String textoAtualizado = "PONTUAÇÃO: " + pontuacao;
-    
-    textoPontuacao = new GreenfootImage(textoAtualizado, 24, Color.WHITE, null);
-    
-    List<Actor> atores = getObjectsAt(getWidth() / 2, 20, Actor.class);
-    if (!atores.isEmpty()) {
-        atores.get(0).setImage(textoPontuacao);
+        String textoAtualizado = "PONTUAÇÃO: " + pontuacao;
+        
+        textoPontuacao = new GreenfootImage(textoAtualizado, 24, Color.WHITE, null);
+        
+        List<Actor> atores = getObjectsAt(getWidth() / 2, 20, Actor.class);
+        if (!atores.isEmpty()) {
+            atores.get(0).setImage(textoPontuacao);
+        }
     }
-}
 
     protected void adicionarMaca() {
         int x = Greenfoot.getRandomNumber(getWidth());
